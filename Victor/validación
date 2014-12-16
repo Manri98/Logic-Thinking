@@ -1,0 +1,36 @@
+nombre = input("Introduzca su nombre de usuario")
+
+while len(nombre)>12:
+    print("El nombre de usuario no puede contener más de 12 caracteres")
+    nombre = input("Introduzca otro nombre de usuario")
+
+while len(nombre)<6:
+    print("El nombre de usuario debe contener al menos 6 caracteres")
+    nombre = input("Introduzca otro nombre de usuario")
+
+while nombre.isalnum() == False:
+    print("El nombre de usuario puede contener solo letras y números")
+    nombre = input("Introduzca otro nombre de usuario")
+
+contraseña = input("introduzca su contraseña")
+
+while len(contraseña)<8:
+    print("La contraseña debe tener más de 8 caracteres")
+    contraseña = input("Introduzca otra contraseña")
+
+while contraseña.isalnum() == True:
+    print("La contraseña debe tener caracteres no alfanuméricos")
+    contraseña = input("Introduzca otra contraseña")
+    
+while contraseña.islower() == True:
+    print("La contraseña debe contener letras mayúsculas")
+    contraseña = input("Introduzca otra contraseña")
+
+while contraseña.isupper() == True:
+    print("La contraseña debe contener letras minúsculas")
+    contraseña = input("Introduzca otra contraseña")
+    
+while chr(32) in contraseña:
+    print("La contraseña no puede contener espacios")
+    contraseña = input("Introduzca otra contraseña")
+    
