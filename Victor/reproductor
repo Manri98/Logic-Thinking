@@ -1,0 +1,35 @@
+from tkinter import *
+import os
+
+
+
+ventana = Tk()
+ventana.config(bg="black")
+ventana.geometry("150x250")
+
+i1 = PhotoImage(file="atras.png")
+b1 = Button(ventana, image=i1, text="atras", width=32, height=32)
+b1.grid(row=0, column=0)
+
+i2 = PhotoImage(file="lista.png")
+b2 = Button(ventana, image=i2, text="atras", width=32, height=32)
+b2.grid(row=0, column=1)
+
+i3 = PhotoImage(file="aleatorio.png")
+b3 = Button(ventana, image=i3, text="atras", width=32, height=32)
+b3.grid(row=0, column=2)
+
+i4 = PhotoImage(file="adelante.png")
+b4 = Button(ventana, image=i4, text="atras", width=32, height=32)
+b4.grid(row=0, column=3)
+
+i5 = PhotoImage(file="favorito.png")
+b5 = Button(ventana, image=i5, text="atras", width=32, height=32)
+b5.grid(row=1, column=0)
+
+t1 = Label(ventana, text="LO MAS ESCUCHADO")
+t1.grid(row=1, columnspan=4)
+
+ventana.mainloop()
+
+
