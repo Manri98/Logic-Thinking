@@ -1,0 +1,53 @@
+from tkinter import *
+import time
+
+
+# PALABRAS
+
+lista1 = ['hola','gato','casa','pino']
+lista2 = ['coche','caballo','profesor','baloncesto']
+lista3 = ['guitarra','rastrillo','banquillo','lazarillo']
+lista4 = ['camión','rocío','arándano','zarigüella']
+
+# FUNCIONES
+def reloj():
+    nsec = 5
+    
+    for x in range(nsec, -1, -1):
+        time.sleep(1)
+        minutes, seconds_rem = divmod(x, 60)
+        w.config(text="%02d:%02d" % (minutes, seconds_rem))
+        w.update_idletasks()
+
+def nueva_palabra():
+    w.config(text="Hola")
+    reloj()
+
+def comprueba_palabra():
+    reloj()
+    
+
+
+# DECLARACIÓN DE LA VENTANA Y LOS CONTROLES
+ventana = Tk()
+
+p = Label(ventana, text="palabra")
+p.pack()
+p.cget("text")
+
+w = Label(ventana, text="")
+w.pack()
+
+v = StringVar()
+e = Entry(ventana, textvariable=v)
+e.pack()
+e.cget("text")
+
+b = Button(ventana, text="Nueva", command=nueva_palabra)
+b.pack()
+
+c = Button(ventana, text="Comprobar", command=nueva_palabra)
+c.pack()
+
+
+ventana.mainloop()
