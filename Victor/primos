@@ -1,0 +1,19 @@
+import threading
+
+x = 100
+
+def numero(x,p):
+    for x in range (len(x+1)):
+        print (x)
+    pass
+    
+
+def primo():
+    for i in range(2,numero): if (numero%i)==0: # es divisible return False
+
+
+n = threading.Thread(target=nummero)
+p = threading.Thread(target=primo)
+
+n.start()
+p.start()
