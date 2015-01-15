@@ -1,0 +1,25 @@
+import threading
+import time
+
+nombre2 = "VICTOR"
+
+def nombre():
+    global nombre2
+    for x in range(len(nombre2)):
+        print (nombre2[x])
+        time.sleep(1)
+    
+def numeros():
+    global nombre2
+    for x in range (1,12):
+        print (x)
+        time.sleep(0.5)
+
+
+    
+    
+nombre = threading.Thread(target=nombre)
+numeros = threading.Thread(target=numeros)
+
+nombre.start()
+numeros.start()
