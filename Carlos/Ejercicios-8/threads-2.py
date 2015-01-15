@@ -1,10 +1,10 @@
 import threading
 
-n = 100 
+n = 0 
 
 def Validar():
     a = 0  
-    for i in range(1,n+1):  
+    for i in range(1,101):  
         if(n % i==0):  
             a=a+1  
     if(a!=2):  
@@ -15,7 +15,9 @@ def Validar():
     
 
 
-def Escribir():
+def Escribir(n, primo):
+    print(n,' ',primo)
+    n += 1
 
 
         
