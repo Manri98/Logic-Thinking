@@ -1,20 +1,27 @@
 import threading
 import time
 
-def worker():
-    print('Comienza', threading.currentThread().getName())
-    time.sleep(2)
-    print('Termina', threading.currentThread().getName())
+name = ['J', 'o', 's', 'e']
+def nombre():
+    for x in range(0, len(name)):
+        print(name[x])
+        time.sleep(0.2)
 
-def service():
-    print('Comienza', threading.currentThread().getName())
-    time.sleep(3)
-    print('Termina', threading.currentThread().getName())
+def numeros():
+    for i in range(1, len(name)+len(name)+1):
+        print(i)
+        time.sleep(0.1)
 
-t = threading.Thread(name='service', target=service)
-w = threading.Thread(name='worker', target=worker)
-w2 = threading.Thread(name='worker2', target=worker)
+def deletrea():
+    print('Deletreame tu nombre')
+    time.sleep(0.5)
+    for o in range(0,100):
+        name[o]=input(o)
 
-w.start()
-w2.start()
-t.start()
+nom = threading.Thread(name='nombre', target=nombre)
+num = threading.Thread(name='worker', target=numeros)
+
+deletrea()
+nom.start()
+num.start()
+
