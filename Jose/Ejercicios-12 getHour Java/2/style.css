@@ -3,6 +3,7 @@
 }
 
 .barra{
+	margin-bottom: 10px;
 	position: center;
 	overflow: hidden;
 	width: 400px;
