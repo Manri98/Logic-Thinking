@@ -5,53 +5,63 @@
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 			<script>
 			$(document).ready(function(){
+				var cont1 = 0;
+				var cont2 = 0;
+				var cont3 = 0;
+				
+				var fact1 = 0;
+				var fact2 = 0;
+				var fact3 = 0;
 				$("#btn1").click(function(){
-					$("#box11").animate({width: "100%"});
-				});
-				$("#btn2").click(function(){
-					$("#box11").animate({width: "100px"});
+					cont1++;
+					actualizar()
 				});
 				
 				
 				$("#btn3").click(function(){
-					$("#box22").animate({width: "100%"});
-				});
-				$("#btn4").click(function(){
-					$("#box22").animate({width: "100px"});
+					cont2++;
+					actualizar()
 				});
 				
 				
 				$("#btn5").click(function(){
-					$("#box33").animate({width: "100%"});
+					cont3++;
+					actualizar()
 				});
-				$("#btn6").click(function(){
-					$("#box33").animate({width: "100px"});
-				});
+				function actualizar(){
+					var pe;
+					var perc;
+					pe = cont3+cont2+cont1;
+					perc = 100/pe;
+					fact1 = cont1*pe;
+					fact2 = cont2*pe;
+					fact3 = cont3*pe;
+					$("#box11").animate({width: fact1+"%"});
+					$("#box22").animate({width: fact2+"%"});
+					$("#box33").animate({width: fact3+"%"});
+				}
 			});
 			</script>
 		</head>
 	<body>
-		<button id="btn1" class="btn">Vota 1</button>
-		<button id="btn2" class="btn">Vota 2</button>
 		<div style="width: 100%; float: left">
+		<button id="btn1" class="btn">Vota esto</button>
 			<div id="box11" class="box11">
 				<div id="box1" class="box2">
 				<p class="counter"></p>
 				</div>
 			</div>
 		</div>
-		<button id="btn3" class="btn">Vota 1</button>
-		<button id="btn4" class="btn">Vota 2</button>
 		<div style="width: 100%; float: left">
+		<button id="btn3" class="btn">Vota esto</button>
 			<div id="box22" class="box22">
 				<div id="box2" class="box2">
 				<p class="counter"></p>
 				</div>
 			</div>
 		</div>
-		<button id="btn5" class="btn">Vota 1</button>
-		<button id="btn6" class="btn">Vota 2</button>
 		<div style="width: 100%; float: left">
+		<button id="btn5" class="btn">Vota esto</button>
 			<div id="box33" class="box33">
 				<div id="box3" class="box2">
 				<p class="counter"></p>
