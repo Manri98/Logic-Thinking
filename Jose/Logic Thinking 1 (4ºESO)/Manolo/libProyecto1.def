@@ -1,0 +1,2 @@
+; dlltool --base-file C:\Users\asus\AppData\Local\Temp/cca06704.base --output-exp Proyecto1.exp --dllname Proyecto1.dll --output-def libProyecto1.def --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\asus\AppData\Local\Temp/cca06704.def --output-lib libProyecto1.a
+EXPORTS
