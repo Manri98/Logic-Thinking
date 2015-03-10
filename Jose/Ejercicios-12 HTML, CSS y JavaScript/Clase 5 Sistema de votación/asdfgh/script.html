@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+			<script>
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					$("#box11").animate({width: "100%"});
+				});
+				$("#btn2").click(function(){
+					$("#box11").animate({width: "100px"});
+				});
+				
+				
+				$("#btn3").click(function(){
+					$("#box22").animate({width: "100%"});
+				});
+				$("#btn4").click(function(){
+					$("#box22").animate({width: "100px"});
+				});
+				
+				
+				$("#btn5").click(function(){
+					$("#box33").animate({width: "100%"});
+				});
+				$("#btn6").click(function(){
+					$("#box33").animate({width: "100px"});
+				});
+			});
+			</script>
+		</head>
+	<body>
+		<button id="btn1" class="btn">Vota 1</button>
+		<button id="btn2" class="btn">Vota 2</button>
+		<div style="width: 100%; float: left">
+			<div id="box11" class="box11">
+				<div id="box1" class="box2">
+				<p class="counter"></p>
+				</div>
+			</div>
+		</div>
+		<button id="btn3" class="btn">Vota 1</button>
+		<button id="btn4" class="btn">Vota 2</button>
+		<div style="width: 100%; float: left">
+			<div id="box22" class="box22">
+				<div id="box2" class="box2">
+				<p class="counter"></p>
+				</div>
+			</div>
+		</div>
+		<button id="btn5" class="btn">Vota 1</button>
+		<button id="btn6" class="btn">Vota 2</button>
+		<div style="width: 100%; float: left">
+			<div id="box33" class="box33">
+				<div id="box3" class="box2">
+				<p class="counter"></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

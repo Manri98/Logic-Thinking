@@ -1,0 +1,29 @@
+.btn{
+	position: relative;
+	margin-rigth: 5px;
+}
+
+
+.box11{
+	height:143px;
+	width:100px;
+	overflow: hidden;
+}
+
+.box22{
+	height:143px;
+	width:100px;
+	overflow: hidden;
+}
+
+.box33{
+	height:143px;
+	width:100px;
+	overflow: hidden;
+}
+
+.box2{
+	background-color: #000;
+	height: 143px;
+}
+	
