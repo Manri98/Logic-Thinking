@@ -4,10 +4,20 @@
 	<head>
 		<title>Elecciones 2015</title>
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.win.js"></script>
 	</head>
 	<script>
-		$(document).ready()
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#box1").animate({width: 100%});
+			});
+			$("#btn2").click(function(){
+				$("#box1").animate({width: 100px});
+			});
+		});				
 	</script>
 	<body>
+		<button id="btn1" class="btn">Vota 1</button>
+		<button id="btn2" class="btn">Vota 2</button>
 		
 	</body>
