@@ -1,0 +1,33 @@
+.btn1, .btn2, .btn3{
+	float: left;
+	position: relative;
+	margin: 0 1%;
+	width: 15%;
+}
+
+.btn1 img, .btn2 img, .btn3 img{
+	width: 100%;
+}
+.box1, .box2, .box3{
+	height:152px;
+	width:0px;
+	max-width: 80%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.box1{
+	background: #FF0000;
+}
+
+.box2{
+	background: #009999;
+}
+
+.box3{
+	background: #9FEE00;
+}
+
+.option{
+	clear: both;
+}
