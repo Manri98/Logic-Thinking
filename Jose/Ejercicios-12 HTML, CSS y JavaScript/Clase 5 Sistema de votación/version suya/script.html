@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	var count1 = 0;
+	var count2 = 0;
+	var count3 = 0;
+	var total = 0;
+	var person = new Array("John", "Paul", "George");
+    $("#btn1").click(function(){
+		count1++;
+		total++;
+        $("#box1").animate({width: (count1/total)*100+"%"});
+		document.getElementById("box1_percent").innerHTML = ((count1/total)*100).toFixed(2) + "%";
+		$("#box2").animate({width: (count2/total)*100+"%"});
+		document.getElementById("box2_percent").innerHTML = ((count2/total)*100).toFixed(2) + "%";
+		$("#box3").animate({width: (count3/total)*100+"%"});
+		document.getElementById("box3_percent").innerHTML = ((count3/total)*100).toFixed(2) + "%";
+		seeResults();
+    });
+    $("#btn2").click(function(){
+		count2++;
+		total++;
+		$("#box1").animate({width: (count1/total)*100+"%"});
+		document.getElementById("box1_percent").innerHTML = ((count1/total)*100).toFixed(2) + "%";
+        $("#box2").animate({width: (count2/total)*100+"%"});
+		document.getElementById("box2_percent").innerHTML = ((count2/total)*100).toFixed(2) + "%";
+		$("#box3").animate({width: (count3/total)*100+"%"});
+		document.getElementById("box3_percent").innerHTML = ((count3/total)*100).toFixed(2) + "%";
+		seeResults();
+    });
+    $("#btn3").click(function(){
+		count3++;
+		total++;
+		$("#box1").animate({width: (count1/total)*100+"%"});
+		document.getElementById("box1_percent").innerHTML = ((count1/total)*100).toFixed(2) + "%";
+		$("#box2").animate({width: (count2/total)*100+"%"});
+		document.getElementById("box2_percent").innerHTML = ((count2/total)*100).toFixed(2) + "%";
+        $("#box3").animate({width: (count3/total)*100+"%"});
+		document.getElementById("box3_percent").innerHTML = ((count3/total)*100).toFixed(2) + "%";
+		seeResults();
+    });
+    function seeResults()
+    {
+    	
+    }
+});
+</script>
+</head>
+<body>
+<div class="option">
+<button id="btn1" class="btn1"><img src="silueta.png"></button>
+
+<div id="box1" class="box1">
+	<h1 id="box1_percent"></h1>
+</div>
+</div>
+<div class="option">
+<button id="btn2" class="btn2"><img src="silueta.png"></button>
+<div id="box2" class="box2">
+	<h1 id="box2_percent"></h1>
+</div>
+</div>
+<div class="option">
+<button id="btn3" class="btn3"><img src="silueta.png"></button>
+<div id="box3" class="box3">
+	<h1 id="box3_percent"></h1>
+</div>
+</div>
+
+</body>
+</html>
