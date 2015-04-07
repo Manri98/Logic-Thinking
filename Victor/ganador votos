@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	var count1 = 0;
+	var count2 = 0;
+	var count3 = 0;
+	var total = 0;
+	var person = ["Jimi Hendrix", "Janis Joplin", "Jim Morrison"]
+	var index;
+    $("#btn1").click(function(){
+		count1++;
+		total++;
+        $("#box1").animate({width: (count1/total)*100+"%"});
+	document.getElementById("box1_percent").innerHTML = Math.round((count1/total)*100) + "%";
+	$("#box2").animate({width: (count2/total)*100+"%"});
+	document.getElementById("box2_percent").innerHTML = Math.round((count2/total)*100) + "%";
+	$("#box3").animate({width: (count3/total)*100+"%"});
+	document.getElementById("box3_percent").innerHTML = Math.round((count3/total)*100) + "%";
+	seeResults();
+    });
+    $("#btn2").click(function(){
+		count2++;
+		total++;
+	$("#box1").animate({width: (count1/total)*100+"%"});
+	document.getElementById("box1_percent").innerHTML = Math.round((count1/total)*100) + "%";
+        $("#box2").animate({width: (count2/total)*100+"%"});
+	document.getElementById("box2_percent").innerHTML = Math.round((count2/total)*100) + "%";
+	$("#box3").animate({width: (count3/total)*100+"%"});
+	document.getElementById("box3_percent").innerHTML = Math.round((count3/total)*100) + "%";
+	seeResults();
+    });
+    $("#btn3").click(function(){
+		count3++;
+		total++;
+	$("#box1").animate({width: (count1/total)*100+"%"});
+	document.getElementById("box1_percent").innerHTML = Math.round((count1/total)*100) + "%";
+	$("#box2").animate({width: (count2/total)*100+"%"});
+	document.getElementById("box2_percent").innerHTML = Math.round((count2/total)*100) + "%";
+        $("#box3").animate({width: (count3/total)*100+"%"});
+	document.getElementById("box3_percent").innerHTML = Math.round((count3/total)*100) + "%";
+	seeResults();
+    });
+    function seeResults()
+    {
+    	if (count1 > count2 && count1 > count3){
+        	document.getElementById("result").innerHTML = person[0] + " tiene el mayor número de votos ";
+        }
+		else if(count2 > count1 && count2 > count3){
+			document.getElementById("result").innerHTML = person[1] + " tiene el mayor número de votos ";
+		}
+		else if(count3 > count1 && count3 > count2){
+			document.getElementById("result").innerHTML = person[2] + " tiene el mayor número de votos ";
+		}
+		else {
+			document.getElementById("result").innerHTML = " ¡Vota a tu favorito! ";
+		}      		
+    }
+});
+</script>
+
+</head>
+<body>
+<div class="option">
+<button id="btn1" class="btn1"><img src="silueta1.png"></button>
+
+<div id="box1" class="box1">
+	<h1 id="box1_percent"></h1>
+</div>
+</div>
+<div class="option">
+<button id="btn2" class="btn2"><img src="silueta2.png"></button>
+<div id="box2" class="box2">
+	<h1 id="box2_percent"></h1>
+</div>
+</div>
+<div class="option">
+<button id="btn3" class="btn3"><img src="silueta3.png"></button>
+<div id="box3" class="box3">
+	<h1 id="box3_percent"></h1>
+</div>
+</div>
+<hl id="result"></h1>
+</body>
+</html>
