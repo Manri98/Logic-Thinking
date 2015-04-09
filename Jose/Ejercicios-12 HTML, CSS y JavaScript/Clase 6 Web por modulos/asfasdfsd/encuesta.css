@@ -1,0 +1,33 @@
+.btn{
+        position: relative;
+        margin-rigth: 5px;
+ 
+}
+ 
+.box1, .box2, .box3{
+        height:143px;
+        width:0px;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 100px 100px 100px 0px;
+        -moz-border-radius: 100px 100px 100px 0px;
+        -webkit-border-radius: 100px 100px 100px 0px;
+        border: 6px double #000000;
+        margin-top: 10px;
+}
+ 
+.box1{
+        background-color: #800000;
+}
+ 
+.box2{
+        background-color: #E60000;
+}
+ 
+.box3{
+        background-color: #FF3333;
+}
+ 
+p{
+        color: #000000;
+}

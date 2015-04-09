@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link rel="stylesheet" type="text/css" href="encuesta.css">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                <script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
+                <script>
+                $(document).ready(function(){
+                        var count1 = 0;
+                        var count2 = 0;
+                        var count3 = 0;
+                        var total = 0;
+                        $("#btn1").click(function(){
+                                count1++;
+                                total++;
+                                $("#box1").animate({width: (count1/total)*100+"%"});
+                                $("#box2").animate({width: (count2/total)*100+"%"});
+                                $("#box3").animate({width: (count3/total)*100+"%"});
+                                document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
+                                document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
+                                document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+                        });
+                        $("#btn2").click(function(){
+                                count2++;
+                                total++;
+                                $("#box1").animate({width: (count1/total)*100+"%"});
+                                $("#box2").animate({width: (count2/total)*100+"%"});
+                                $("#box3").animate({width: (count3/total)*100+"%"});
+                                document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
+                                document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
+                                document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+                        });
+                        $("#btn3").click(function(){
+                                count3++;
+                                total++;
+                                $("#box1").animate({width: (count1/total)*100+"%"});
+                                $("#box2").animate({width: (count2/total)*100+"%"});
+                                $("#box3").animate({width: (count3/total)*100+"%"});
+                                document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
+                                document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
+                                document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+                        });
+                });
+                </script>
+                <script type="application/javascript">
+                function getip(json){
+                        document.write("TU DIRECCIÓN IP ES: " + json.ip + "</br>");
+                }
+                </script>
+        </head>
+        <body>
+ 
+                <div id="box1" class="box1">
+                        <p id="p1"></p></div>
+ 
+                <div id="box2" class="box2">
+                        <p id="p2"></p></div>
+ 
+                <div id="box3" class="box3">
+                        <p id="p3"></div>
+                <button id="btn1" class="btn1">Voto 1</button>
+                <button id="btn2" class="btn2">Voto 2</button>
+                <button id="btn3" class="btn3">Voto 3</button>
+        </body>
+</html>
