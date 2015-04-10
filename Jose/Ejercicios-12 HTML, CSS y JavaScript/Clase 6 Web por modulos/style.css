@@ -137,6 +137,15 @@ div.texto-emergente{
 	clear: both;
 }
 
+.top2{
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	clear: both;
+	background-color: #E8E8E8;
+}
+
 .cuerpo{
 	max-width: 1280px;
 	margin-left: auto;
@@ -222,7 +231,7 @@ footer hr {
 body{
   margin: 0px;
   padding: 0px;
-  background: #191919;
+  background: #2EB8E6;
   font-family: 'Lato', sans-serif;
 }
 
