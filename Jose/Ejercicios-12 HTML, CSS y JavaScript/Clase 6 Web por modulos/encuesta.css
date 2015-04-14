@@ -31,3 +31,10 @@
 p{
         color: #000000;
 }
+
+.divcl{
+	
+		background-color: #E8E8E8;
+		width: 50%; 
+		float: left
+}	

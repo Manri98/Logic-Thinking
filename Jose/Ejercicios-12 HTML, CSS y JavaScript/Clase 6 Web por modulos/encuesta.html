@@ -18,6 +18,8 @@
                     document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
                     document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
                     document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+					reloadmarcador();
+					document.getElementById("marcador").innerHTML = "Punto para el 1";
                 });
                 $("#btn2").click(function(){
                     count2++;
@@ -28,6 +30,8 @@
                     document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
                     document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
                     document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+					reloadmarcador();
+					document.getElementById("marcador").innerHTML = "Punto para el 2";
                 });
                 $("#btn3").click(function(){
                     count3++;
@@ -38,11 +42,19 @@
                     document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
                     document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
                     document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+					reloadmarcador();
+					document.getElementById("marcador").innerHTML = "Punto para el 3";
                 });
+				$.get('http://jsonip.com', function (res){
+					$('p1').html('Tu IP es: ')
+				});
+				function reloadmarcador() {
+				};
             });
         </script>
     </head>
 	<body>
+	<div class="divcl">
         <div id="box1" class="box1">
             <p id="p1">
 		</div>
@@ -55,5 +67,13 @@
         <button id="btn1" class="btn1">Voto 1</button>
         <button id="btn2" class="btn2">Voto 2</button>
         <button id="btn3" class="btn3">Voto 3</button>
+	</div>
+	<div class="divcl">
+		<hr>
+		<h1>MARCADOR</h1>
+		<hr>
+		<p id="marcador"></p>
+		<p1></p1>
+	</div>
     </body>
 </html>
