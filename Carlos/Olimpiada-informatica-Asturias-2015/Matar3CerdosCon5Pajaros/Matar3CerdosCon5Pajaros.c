@@ -1,6 +1,6 @@
 /* Carlos Manrique Enguita
- * Problema 2
- * Matar3Cerdos
+ * Problema 3
+ * Matar3CerdosCon5Pajaros
 */
  
 #include <stdio.h>
@@ -14,6 +14,8 @@ float velocidad = 0;
 float angulo = 0;
 float distancia = 0;
 int cerdo = 50;
+int puntuacion = 0;
+int municion = 5;
 
 void GradosARadianes();
 void CalculoDistancia();
@@ -26,7 +28,7 @@ int main(){
 	printf("¿A qué velocidad quieres lanzar el pájaro? (0 para cerrar el programa)");
 	scanf("%f", &velocidad);	
 	if (velocidad==0){
-			printf("Good Bye!\n");
+			printf("Good Bye!\nHas matado %i cerdos.\nTe quedaban %i pájaros.\n", puntuacion, municion);
 			return 0;
 	}
 	else if(velocidad<0){
@@ -39,10 +41,14 @@ int main(){
 		scanf("%f", &angulo);
 		MostrarInfo();
 		ValidarTiro();
-	cerdo = cerdo+10;
+	municion--;
 	if(cerdo>70){
-		printf("Good game and good bye!\n");
+		printf("Good game and good bye!\nHas matado %i cerdos.\nTodavía te quedaban %i pájaros.\n", puntuacion, municion);
 		return 0;		
+	}
+	if(municion==0){
+		printf("Good game and good bye!\nHas matado %i cerdos.\nTe has quedado sin munición", puntuacion);
+		return 0;	
 	}
 	main();
 	}	
@@ -66,6 +72,8 @@ void ValidarTiro(){
 	}
 	else{
 		printf("¡¡¡Has matado al cerdo!!!\n");
+		puntuacion++;
+		cerdo = cerdo+10;
 	}	
 }
 
@@ -76,8 +84,6 @@ con un ángulo de %.0f grados respecto a la horizontal\n", velocidad, angulo);
 		CalculoDistancia();	
 		printf("la distancia recorrida es de %.2f metros.\n", distancia);	
 }
-
-
 
 
 

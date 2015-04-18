@@ -40,7 +40,6 @@ int main(){
 		scanf("%f", &angulo);
 		MostrarInfo();
 		ValidarTiro();
-	cerdo = cerdo+10;
 	if(cerdo>70){
 		printf("Good game and good bye!\nHas matado %i cerdos.\n", puntuacion);
 		return 0;		
@@ -68,6 +67,7 @@ void ValidarTiro(){
 	else{
 		printf("¡¡¡Has matado al cerdo!!!\n");
 		puntuacion++;
+		cerdo = cerdo+10;
 	}	
 }
 
