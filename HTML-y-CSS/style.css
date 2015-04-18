@@ -1,0 +1,84 @@
+body {
+  background: #7B68EE;
+}
+
+.pic {
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  border: 10px solid white;
+  overflow: hidden;
+
+  -webkit-box-shadow: 5px 5px 5px #111;
+  box-shadow: 5px 5px 5px #111;
+  float: left;
+}
+
+img{
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  }
+
+/*CRECE*/
+.crece img {
+  height: 300px;
+  width: 300px;
+}
+.crece img:hover {
+  width: 400px;
+  height: 400px;
+}
+
+/*DECRECE*/
+.decrece img {
+  height: 400px;
+  width: 400px;
+}
+.decrece img:hover {
+  width: 300px;
+  height: 300px;
+}
+
+/*LATERAL*/
+.lateral img {
+  margin-left: 0px;
+    height: 300px;
+  width: 300px;
+}
+.lateral img:hover {
+  margin-left: -300px;
+}
+
+/*VERTICAL*/
+.vertical img {
+  margin-top: 0px;
+    width: 300px;
+  height: 300px;
+}
+.vertical img:hover {
+  margin-top: -300px;
+}
+
+/*CAMBIO*/
+.cambio {
+  width: 300px;
+  height: 300px;
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.cambio:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
