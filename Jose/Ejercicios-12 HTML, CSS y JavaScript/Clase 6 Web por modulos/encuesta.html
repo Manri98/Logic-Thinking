@@ -9,48 +9,77 @@
                 var count2 = 0;
                 var count3 = 0;
                 var total = 0;
+				var comprobacion = "v";
+				var newip = 0;
+				var ips = new Array();
+				$.get('http://jsonip.com', function (res){
+					$('p1').html('Tu IP es: ' + res.ip)
+					newip=res.ip;
+				});
+				for (var i = 0; i <= ips.length; i++){
+					if (ips[i] == newip){
+						comprobacion = "v";
+					};
+					else{
+						comprobacion = "f";
+					};
+				};
                 $("#btn1").click(function(){
-                    count1++;
-                    total++;
-                    $("#box1").animate({width: (count1/total)*100+"%"});
-                    $("#box2").animate({width: (count2/total)*100+"%"});
-                    $("#box3").animate({width: (count3/total)*100+"%"});
-                    document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
-                    document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
-                    document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
-					reloadmarcador();
-					document.getElementById("marcador").innerHTML = "Punto para el 1";
+					if(comprobacion = "v"){
+						count1++;
+						total++;
+						$("#box1").animate({width: (count1/total)*100+"%"});
+						$("#box2").animate({width: (count2/total)*100+"%"});
+						$("#box3").animate({width: (count3/total)*100+"%"});
+						document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
+						document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
+						document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+						document.getElementById("marcador").innerHTML = "Punto para el 1";
+						ips.push(newip);
+						localStorage.setItem("Lista de IPs", ips);
+					}
+					else{
+						document.getElementById("marcador").innerHTML = "YA HAS VOTADO";
+					}
                 });
                 $("#btn2").click(function(){
-                    count2++;
-                    total++;
-                    $("#box1").animate({width: (count1/total)*100+"%"});
-                    $("#box2").animate({width: (count2/total)*100+"%"});
-                    $("#box3").animate({width: (count3/total)*100+"%"});
-                    document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
-                    document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
-                    document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
-					reloadmarcador();
-					document.getElementById("marcador").innerHTML = "Punto para el 2";
+					if(comprobacion = "v"){
+						count2++;
+						total++;
+						$("#box1").animate({width: (count1/total)*100+"%"});
+						$("#box2").animate({width: (count2/total)*100+"%"});
+						$("#box3").animate({width: (count3/total)*100+"%"});
+						document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
+						document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
+						document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+						document.getElementById("marcador").innerHTML = "Punto para el 2";
+						ips.push(newip);
+						localStorage.setItem("Lista de IPs", ips);
+					}
+					else{
+						document.getElementById("marcador").innerHTML = "YA HAS VOTADO";
+					}
                 });
                 $("#btn3").click(function(){
-                    count3++;
-                    total++;
-                    $("#box1").animate({width: (count1/total)*100+"%"});
-                    $("#box2").animate({width: (count2/total)*100+"%"});
-                    $("#box3").animate({width: (count3/total)*100+"%"});
-                    document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
-                    document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
-                    document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
-					reloadmarcador();
-					document.getElementById("marcador").innerHTML = "Punto para el 3";
+					if(comprobacion = "v"){
+						count3++;
+						total++;
+						$("#box1").animate({width: (count1/total)*100+"%"});
+						$("#box2").animate({width: (count2/total)*100+"%"});
+						$("#box3").animate({width: (count3/total)*100+"%"});
+						document.getElementById("p1").innerHTML = Math.round((count1/total)*100)+"%";
+						document.getElementById("p2").innerHTML = Math.round((count2/total)*100)+"%";
+						document.getElementById("p3").innerHTML = Math.round((count3/total)*100)+"%";
+						document.getElementById("marcador").innerHTML = "Punto para el 3";
+						ips.push(newip);
+						localStorage.setItem("Lista de IPs", ips);
+					}
+					else{
+						document.getElementById("marcador").innerHTML = "YA HAS VOTADO";
+					}
                 });
-				$.get('http://jsonip.com', function (res){
-					$('p1').html('Tu IP es: ')
-				});
-				function reloadmarcador() {
-				};
-            });
+				document.getElementById("marcador").innerHTML = localStorage.getItem("Lista de IPs");
+			});
         </script>
     </head>
 	<body>
